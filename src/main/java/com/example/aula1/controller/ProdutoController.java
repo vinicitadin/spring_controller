@@ -20,12 +20,14 @@ public class ProdutoController {
 
     @PutMapping("/{id}")
     public ResponseEntity<String> atualizarProduto(@PathVariable Long id, @RequestBody String produtoAtualizado) {
-        return ResponseEntity.ok("Atualizando produto ID " + id + " para: " + produtoAtualizado);
+        System.out.println("Atualizando produto ID " + id + " para: " + produtoAtualizado);
+        return ResponseEntity.ok("Produto atualizado com sucesso!");
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deletarProduto(@PathVariable Long id)
     {
-        return ResponseEntity.ok("Produto com ID " + id + " deletado com sucesso");
+        System.out.println("Produto com ID " + id + " deletado com sucesso");
+        return ResponseEntity.ok("Produto deletado com sucesso");
     }
 }
